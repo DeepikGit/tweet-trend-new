@@ -10,7 +10,7 @@ environment {
     stages {
         stage('build code') {
             steps {
-                sh 'mvn compile'
+                sh 'mvn test'
             }
         }
     }
