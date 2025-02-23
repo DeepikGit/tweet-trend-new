@@ -4,11 +4,13 @@ pipeline {
             label 'maven-slave'
         }
     }
-
+environment {
+    path="/opt/apache-maven-3.9.9/bin:$PATH"
+}
     stages {
-        stage('clone the code') {
+        stage('build code') {
             steps {
-                git branch: 'main', credentialsId: 'Maven-server-cred', url: 'https://github.com/DeepikGit/tweet-trend-new.git'
+                sh 'mvn clean deploy'
             }
         }
     }
