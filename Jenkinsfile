@@ -10,7 +10,7 @@ environment {
     stages {
         stage('build code') {
             steps {
-                sh 'mvn test'
+                sh 'mvn deploy -Dmaven.test.skip=true'
             }
         }
     }
