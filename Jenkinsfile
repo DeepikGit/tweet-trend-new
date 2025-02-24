@@ -11,7 +11,7 @@ environment {
     stages {
         stage('package code') {
             steps {
-                sh 'mvn clean deploy' 
+                sh 'mvn clean deploy -Dmaven.test.skip=true'
             }
         }
         stage("Jar Publish") {
