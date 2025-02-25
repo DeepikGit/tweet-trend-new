@@ -18,7 +18,7 @@ environment {
             steps {
                 script {
                         echo '<--------------- Jar Publish Started --------------->'
-                         def server = Artifactory.newServer url:registry+"/artifactory" ,  credentialsId:"jfrog-access-token"
+                         def server = Artifactory.newServer url:registry+"/artifactory" ,  credentialsId:"jfrog-creds-jenkins"
                          def properties = "buildid=${env.BUILD_ID},commitid=${GIT_COMMIT}";
                          def uploadSpec = """{
                               "files": [
@@ -38,7 +38,7 @@ environment {
                 
                 }
             }   
-        }   
+        }       
 
 
     }
