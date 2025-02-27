@@ -26,6 +26,13 @@ environment {
                 }
             }
         }
+        stage('deploy Docker Image') {
+            steps {
+                script {
+                    sh './deploy.sh'
+                }
+            }
+        }
 
 
     }
