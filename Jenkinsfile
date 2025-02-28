@@ -29,11 +29,7 @@ environment {
         stage('deploy Docker Image') {
             steps {
                 script {
-<<<<<<< HEAD
                     sh './myscript1.sh'
-=======
-                    sh './myscript.sh'
->>>>>>> 6eb5886694b3a9d399b5588dd3cee2608d6c11d6
                 }
             }
         }
